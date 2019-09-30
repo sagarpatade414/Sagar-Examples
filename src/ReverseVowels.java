@@ -6,7 +6,7 @@ import java.util.Set;
 public class ReverseVowels {
 	
 	public static void main(String[] args) {
-		String reverseStr = reverseVowels("leetcode");
+		String reverseStr = reverseVowels("aeiouAEIOU");
 		
 		System.out.println("Reverse Vowel String : " + reverseStr);
 	}
