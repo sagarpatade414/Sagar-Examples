@@ -1,17 +1,13 @@
 
 public class ReturnFristCharaInString {
 	
-	
 	public static void main(String[] args) {
-		
-		
-		
-		int indexPosition = indexFirstChar("My solution to this is a simple platform that allows", 't'); 
+		int indexPosition = indexFirstChar("", 't'); 
 		System.out.print("Index Position :" + indexPosition);
 	}
 	
 	public static int indexFirstChar(String str, char c) {
-		
+		str.toLowerCase();
 		
 		if(str != null && !str.isEmpty()) {
 			
