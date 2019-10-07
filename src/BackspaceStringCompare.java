@@ -44,7 +44,7 @@ public class BackspaceStringCompare {
 			} 
 		}
 		
-		if( sbS.toString().equals( sbT.toString()) ) {
+		if( sbS.toString().equals( sbT.toString() ) ) {
 			return true;
 		}
 		
