@@ -44,13 +44,11 @@ public class BackspaceStringCompareStack {
 		
 		
 		while(!sStack.isEmpty()) {
-			
 			Character sElem = sStack.pop();
 			
 			if(tStack.isEmpty() || tStack.pop() != sElem) {
 				return false;
 			}
-			
 		}
 		
 		return sStack.isEmpty() && tStack.isEmpty();
