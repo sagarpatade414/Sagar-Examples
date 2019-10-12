@@ -16,6 +16,7 @@ public class ReverseVowels {
         
 		int i=0;
 		int j=s.length()-1;
+		char[] stringChar = s.toCharArray(); 		
 		
 		Set<Character> vowels = new HashSet<>();
 		vowels.add('A');
@@ -29,8 +30,7 @@ public class ReverseVowels {
 		vowels.add('U');
 		vowels.add('u');
 		
-		char[] stringChar = s.toCharArray(); 
-	
+			
 		while(i<j) {
 			
 			if( i<j  && !vowels.contains(stringChar[i]) ) {
