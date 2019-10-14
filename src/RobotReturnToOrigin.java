@@ -3,7 +3,7 @@ public class RobotReturnToOrigin {
 	
 	public static void main(String[] args) {
 		
-		boolean judge = judgeCircle("URL");
+		boolean judge = judgeCircle("UDRL");
 		System.out.print("Judge : " + judge);
 	}
 	
