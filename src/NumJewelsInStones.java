@@ -13,6 +13,8 @@ public class NumJewelsInStones {
 	}
 	
 	public static int numJewelsInStones(String J, String S) {
+		
+		S.toLowerCase();
         
 		if(J == null || J.length() == 0 || S == null || S.length() == 0) {
 			return 0;
