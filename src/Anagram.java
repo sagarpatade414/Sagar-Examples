@@ -3,7 +3,8 @@ public class Anagram {
 	
 	public static void main(String[] args) {
 		String s = "anagram", t = "nagaram";
-		isAnagram(s, t);
+		boolean isAngram = isAnagram(s, t);
+		System.out.print(" isAngram : " + isAngram);
 	}
 	
 	
