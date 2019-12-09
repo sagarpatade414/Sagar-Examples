@@ -6,7 +6,7 @@ public class LinkedList<AnyType> implements Iterable<AnyType>
 {
    private Node<AnyType> head;
 
- /**
+  /**
    *  Constructs an empty list
    */
    public LinkedList()
@@ -35,8 +35,10 @@ public class LinkedList<AnyType> implements Iterable<AnyType>
    */
    public AnyType getFirst()
    {
-      if(head == null) throw new NoSuchElementException();
-
+      if(head == null) {
+    	  throw new NoSuchElementException();
+      }
+      
       return head.data;
    }
  /**
@@ -105,8 +107,7 @@ public class LinkedList<AnyType> implements Iterable<AnyType>
    *  Returns the data at the specified position in the list.
    *
    */
-   public AnyType get(int pos)
-   {
+   public AnyType get(int pos) {
       if (head == null) {
     	  throw new IndexOutOfBoundsException();
       }
@@ -338,6 +339,18 @@ public class LinkedList<AnyType> implements Iterable<AnyType>
       list.addFirst("e");
       list.addFirst("h");
       System.out.println(list);
+      
+      
+      String s = "Tomorrow";
+      String[] st = s.split("r");
+      
+      System.out.println(st.length);
+      
+      for(String sss : st) {
+    	  System.out.println(sss);
+      }
+      
+      
 
 	  LinkedList<String> twin = list.copy3();
       System.out.println(twin);
