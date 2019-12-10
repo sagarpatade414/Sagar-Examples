@@ -13,6 +13,9 @@ public class ReverseString {
 		
 		String reversedString = reversedString(str);
 		System.out.println(reversedString);
+		
+		char[] ch = str.toCharArray();
+		reverseString(ch);
 	}
 	
 	
@@ -25,4 +28,15 @@ public class ReverseString {
 		
 		return sb.toString();
 	}
+	
+	
+	public static void reverseString(char[] s) {
+        StringBuilder sb = new StringBuilder();
+            
+		for(int i=s.length-1; i>=0; i--) {
+			sb.append(s[i]);
+		}
+		
+		sb.toString();
+    }
 }
