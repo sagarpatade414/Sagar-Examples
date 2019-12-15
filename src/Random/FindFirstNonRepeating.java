@@ -9,7 +9,7 @@ import java.util.Set;
 public class FindFirstNonRepeating {
   
 	public static void main(String[] args) {
-		int[] nums = {9,2,3,2,6,6};
+		int[] nums = {9,2,3,2,6,6,9,8};
 		int res = findFirstNonRepeatingInt(nums);
 		
 		
