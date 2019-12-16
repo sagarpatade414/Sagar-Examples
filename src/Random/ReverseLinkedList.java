@@ -26,7 +26,6 @@ public class ReverseLinkedList {
             head = new Node(data);
 
         } else {
-
            // Create a new node
            Node temp = new Node(data);
            // New node points to head
