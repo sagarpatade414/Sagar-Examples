@@ -52,6 +52,24 @@ public class MinimumValueBT {
 	}
 	
 	
+	static int maxDepth(Node node)  
+    { 
+        if (node == null) 
+            return 0; 
+        else 
+        { 
+            /* compute the depth of each subtree */
+            int lDepth = maxDepth(node.left); 
+            int rDepth = maxDepth(node.right); 
+   
+            /* use the larger one */
+            if (lDepth > rDepth) 
+                return (lDepth + 1); 
+             else 
+                return (rDepth + 1); 
+        } 
+    } 
+	
 	public static int findHeightOfTree(Node node) {
 		Node currentleft = node;
 		Node currentright = node;
@@ -75,7 +93,7 @@ public class MinimumValueBT {
 				System.out.println("rightCount : " + rightCount); 
 			}
 			
-			return Math.max(leftCount, rightCount);
+			return Math.max(leftCount, rightCount) +1;
 			
 		}
 		
@@ -100,7 +118,7 @@ public class MinimumValueBT {
   
         System.out.println("Minimum value of BST is " + tree.minValue(root)); 
         System.out.println("Max value of BST is " + tree.maxValue(root)); 
-        
+        System.out.println("depth of BST " + maxDepth(root)); 
         System.out.println("Height of BST " + findHeightOfTree(root)); 
     } 
 	

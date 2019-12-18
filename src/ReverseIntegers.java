@@ -2,8 +2,8 @@
 public class ReverseIntegers {
 	
 	public static void main(String[] args) {
-		//int x = -123;
-		int x = 210;
+		int x = -12345;
+		//int x = 210;
 		int rev = reverse(x);
 	
 		System.out.print(" Reversed num : " + rev);
@@ -22,6 +22,7 @@ public class ReverseIntegers {
 		
 		while(x > 0) {
 			reversed = (reversed * 10) + (x%10);
+			System.out.println(" x : " + x);
 			x /= 10;
 		}
 		
