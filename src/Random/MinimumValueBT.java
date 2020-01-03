@@ -52,8 +52,7 @@ public class MinimumValueBT {
 	}
 	
 	
-	static int maxDepth(Node node)  
-    { 
+	static int maxDepth(Node node) { 
         if (node == null) 
             return 0; 
         else 
