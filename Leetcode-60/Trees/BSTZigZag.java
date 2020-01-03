@@ -36,57 +36,47 @@ public class BSTZigZag {
 		return node;
 	}
 	
-	 public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-	        List<List<Integer>> result = new ArrayList<>();
-	        
-	        if(root == null){
-	            return result;
-	        }
-	        
-	        Queue<TreeNode> queue = new LinkedList<>();
-	        queue.add(root);
-	        int count=0;
-	        
-	        while(!queue.isEmpty()){
-	            
-	            int size = queue.size();
-	            List<Integer> currentLevel = new ArrayList<>();
-	            
-	            if(count%2==0){
-	                for(int i=0; i<size; i++){
+	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        
+        if(root == null){
+            return result;
+        }
+        
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        boolean order=true;
+        
+        while(!queue.isEmpty()){
+            
+            int size = queue.size();
+            List<Integer> currentLevel = new ArrayList<>();
+            
+            for(int i=0; i<size; i++){
 
-	                    TreeNode current = queue.remove();
-	                    currentLevel.add(current.val);
+                TreeNode current = queue.remove();
+                
+                if(order) {
+                    currentLevel.add(current.val);
+                } else {
+                    currentLevel.add(0, current.val);
+                }
+                
+                if(current.left != null){
+                    queue.add(current.left);
+                }
 
-	                    if(current.left != null){
-	                        queue.add(current.left);
-	                    }
-
-	                    if(current.right != null){
-	                        queue.add(current.right);
-	                    }
-	                }
-	            } else {
-	                for(int i=size-1; i>=0; i--){
-
-	                    TreeNode current = queue.remove();
-	                    currentLevel.add(current.val);
-
-	                    if(current.right != null){
-	                        queue.add(current.right);
-	                    }
-	                    
-	                    if(current.left != null){
-	                        queue.add(current.left);
-	                    }
-	                }
-	            }
-	            result.add(currentLevel);
-	            count++;
-	        }
-	        
-	        return result;
-	    }
+                if(current.right != null){
+                    queue.add(current.right);
+                }
+            }
+            
+            result.add(currentLevel);
+            order = order? false:true;
+        }
+        
+        return result;
+    }
 	 
 	 public static void main(String[] args) {
 		 
