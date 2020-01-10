@@ -1,5 +1,8 @@
 package Trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class SameTree {
 	
 	public class TreeNode {
@@ -12,7 +15,10 @@ public class SameTree {
 		}
 	}
 	public boolean isSameTree(TreeNode p, TreeNode q) {
-        if(p==null && q==null){
+        Queue<TreeNode> queue = new LinkedList<>(); 
+        
+        
+		if(p==null && q==null){
             return true;
         }
         
