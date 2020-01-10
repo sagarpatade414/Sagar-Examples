@@ -12,7 +12,7 @@ public class BSTZigZag {
 	static TreeNode head;
 	
 	public class TreeNode {
-	    int val;
+	     int val;
 	     TreeNode left;
 		 TreeNode right;
 		 TreeNode(int x) { val = x; }
