@@ -1,6 +1,10 @@
 package Heaps;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.PriorityQueue;
+import java.util.Set;
 
 public class SortedKList {
 	public class ListNode {
@@ -10,7 +14,8 @@ public class SortedKList {
 	 }
 	
 	public ListNode mergeKLists(ListNode[] lists) {
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+		
+		PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         
         for(ListNode head:lists){
           while(head != null){    
