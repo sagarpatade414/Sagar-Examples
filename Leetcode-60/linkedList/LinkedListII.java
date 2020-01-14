@@ -1,7 +1,5 @@
 package linkedList;
 
-import linkedList.LinkedListCycle.ListNode;
-
 public class LinkedListII {
 	
 	class ListNode {

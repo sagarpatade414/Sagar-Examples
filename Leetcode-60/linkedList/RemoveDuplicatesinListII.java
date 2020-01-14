@@ -1,7 +1,5 @@
 package linkedList;
 
-import linkedList.RemoveDuplicatesInList.ListNode;
-
 public class RemoveDuplicatesinListII {
 	
 	public class ListNode{
