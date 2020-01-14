@@ -1,6 +1,7 @@
 package Trees;
 
-import Trees.BSTZigZag.TreeNode;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class InvertBT {
 	
@@ -21,6 +22,33 @@ public class InvertBT {
         
         root.left = right;
         root.right = left;
+        
+        return root;
+    }
+	
+	public TreeNode invertTree2(TreeNode root) {
+        if(root==null){
+            return root;
+        }
+        
+        Queue<TreeNode> que = new LinkedList<>();
+        que.offer(root);
+        
+        while(!que.isEmpty()){
+            
+            TreeNode node = que.poll();
+            TreeNode tmp = node.left;
+            node.left = node.right;
+            node.right = tmp;
+            
+            if(node.left != null){
+                que.offer(node.left);
+            }
+            
+            if(node.right != null){
+                que.offer(node.right);
+            }
+        }
         
         return root;
     }
