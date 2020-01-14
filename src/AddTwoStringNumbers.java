@@ -15,7 +15,7 @@ public class AddTwoStringNumbers {
         int l1 = num1.length()-1;
         int l2 = num2.length()-1;
         
-        while(l1>=0 || l2>=0){
+        while(l1>=0 || l2>=0) {
         	
         	System.out.println("num1.charAt(l1) : " + num1.charAt(l1));
         	System.out.println("num2.charAt(l1)-'0': " + (num1.charAt(l1) - '0'));
