@@ -1,5 +1,7 @@
 package facebook;
 
+import java.util.Arrays;
+
 public class MaxNumberofToys10 {
 	
 	// Complete the maximumToys function below.
