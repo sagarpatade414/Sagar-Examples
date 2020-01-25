@@ -30,6 +30,19 @@ public class ContainsDuplicate {
 	        return false;
 	   }
 	 
+	 //Another Approach
+	 public boolean containsDuplicates(int[] nums) {
+
+		    final Set<Integer> distinct = new HashSet<Integer>();
+		    for(int num : nums) {
+		        if(distinct.contains(num)) {
+		            return true;
+		        }
+		        distinct.add(num);
+		    }
+		    return false;
+	}
+	 
 	 public static void main(String[] args) {
 		 int[] nums = {1,2,3,4};
 		 boolean check = containsDuplicate(nums);
