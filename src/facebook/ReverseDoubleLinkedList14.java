@@ -7,8 +7,31 @@ public class ReverseDoubleLinkedList14 {
 	         DoublyLinkedListNode next;
 	         DoublyLinkedListNode prev;
 	      }
+	     
+	  static DoublyLinkedListNode reverse(DoublyLinkedListNode head) {
+	         
+	         if(head == null){
+	             return head;
+	         }
+	         DoublyLinkedListNode tmp = null;
+	         DoublyLinkedListNode curr = head;
+
+	         while(curr != null){
+	             tmp = curr.prev;
+	             curr.prev = curr.next;
+	             curr.next = tmp;
+	             curr = curr.prev; 
+	         }
+
+	         if(tmp != null){
+	             head = tmp.prev;
+	         }
+
+	         return head;
+
+	     }    
 	
-	static DoublyLinkedListNode reverse(DoublyLinkedListNode head) {
+	/*static DoublyLinkedListNode reverse(DoublyLinkedListNode head) {
 	       
         if(head == null){
             return head;
@@ -26,6 +49,6 @@ public class ReverseDoubleLinkedList14 {
 
         return newCurr;
 
-    }
+    } */
     
 }
