@@ -2,7 +2,7 @@ package wayfair;
 
 public class SquareRoot {
 	
-	public int mySqrt(int x) {
+	public static int mySqrt(int x) {
 	        
 	        long left=0;
 	        long right=x;
@@ -24,5 +24,12 @@ public class SquareRoot {
 	        }
 	        
 	        return (int)left;
-	    }
+	 }
+	
+	public static void main(String[] args) {
+		int n =1024;
+		int res =mySqrt(n);
+		System.out.print(res);
+				
+	} 
 }
