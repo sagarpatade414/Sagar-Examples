@@ -18,13 +18,16 @@ public class StringCompression {
 			 }
 			 
 			 chars[indexRes++] = curr;
+			 //System.out.println(chars);
 			 index++;
+			 //System.out.println(index);
 			 if(count == 1) continue;
 			 
 			 
 			 for(char c : String.valueOf(count).toCharArray()) {
 				 chars[indexRes++] = c;
 			 }
+			 //System.out.println(chars);
 		 }
 		 
 		 return indexRes;
@@ -32,8 +35,8 @@ public class StringCompression {
 	 
 	 
 	 public static void main(String[] args) {
-		 //char[] charArr = {'a','a','b','b','c','c','c'};
-		 char[] charArr = {'a','b','b','b','b','b','b','b','b','b','b','b','b'};
+		 char[] charArr = {'a','a','b','b','c','c','c'};
+		 //char[] charArr = {'a','b','b','b','b','b','b','b','b','b','b','b','b'};
 		 int res = compress(charArr);
 		 System.out.print(res);
 	 }
