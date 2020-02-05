@@ -5,7 +5,6 @@ public class productSelf {
 	public static void main(String[] args) {
 		 int[] nums = {2,3,4,5};
 		 int[] check = productExceptSelf(nums);
-		 System.out.println("check : " + check );
 		 
 		 for(int c:check) {
 			 System.out.println("check c: " + c );
