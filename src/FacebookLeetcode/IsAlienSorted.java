@@ -2,7 +2,7 @@ package FacebookLeetcode;
 
 public class IsAlienSorted {
 	
-	public boolean isAlienSorted(String[] words, String order) {
+	public static boolean isAlienSorted(String[] words, String order) {
         int[] dict = new int[26];
         
         for(int i=0; i<order.length(); i++){
@@ -18,7 +18,7 @@ public class IsAlienSorted {
         return true;
     }
     
-    public int compare(String word1, String word2, int[] dict){
+    public static int compare(String word1, String word2, int[] dict){
         int L1 = word1.length();
         int L2 = word2.length();
         
@@ -35,5 +35,12 @@ public class IsAlienSorted {
         
         return L1 == minLen ? -1:1;
     } 
+    
+    public static void main(String[] main){
+    	String[] words = {"hello","leetcode"}; 
+    	String order = "hlabcdefgijkmnopqrstuvwxyz"; 
+    	Boolean isAlienSorted = isAlienSorted(words, order);
+    	System.out.println("num To Word : " + isAlienSorted);
+    }
     
 }
