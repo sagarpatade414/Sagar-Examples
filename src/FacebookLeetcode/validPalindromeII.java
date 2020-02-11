@@ -1,5 +1,8 @@
 package FacebookLeetcode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class validPalindromeII {
 	
 	public static boolean validPalindrome(String s) {
@@ -26,7 +29,7 @@ public class validPalindromeII {
     }
 	
 	public static Boolean isPlaindrome(String str, int left, int right){
-        
+		
         while(left<=right){
            if(str.charAt(left) == str.charAt(right)){
               left++;
