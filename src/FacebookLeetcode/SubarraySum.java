@@ -26,8 +26,8 @@ public class SubarraySum {
 	
 	public static void main(String[] main){
     	
-		int k=2;
-		int[] nums = {1,1,1};
+		int k=7;
+		int[] nums = {3,4,7,2,-3,1,4,2};
     	int subarraySum = subarraySum(nums, k);
     	
     	System.out.println("subarraySum: " + subarraySum);
