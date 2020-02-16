@@ -2,7 +2,7 @@ package FacebookLeetcode;
 
 public class minWindowSubString {
 	
-	 public String minWindow(String s, String t) {
+	 public static String minWindow(String s, String t) {
 	       
 	        if(s.length() == 0 || t.length() == 0 || s.length()<t.length()){
 	            return "";
@@ -33,6 +33,7 @@ public class minWindowSubString {
 	            while(counter == 0){
 	               if(minLen > end - start){
 	                   minLen = end-start;
+	                   System.out.println("minLen :" + minLen);
 	                   startMin = start;
 	               }
 	                
@@ -40,6 +41,7 @@ public class minWindowSubString {
 	                map[c2]++;
 	                if(map[c2] > 0){
 	                    counter++; 
+	                    System.out.println("counter :" + counter);
 	                }
 	                start++;
 	            }
@@ -51,7 +53,8 @@ public class minWindowSubString {
 	public static void main(String[] args){
 		String S = "DADOBECODEBANC";
 		String T = "ABC";
-		minWindow(S, T);
+		String minWindow = minWindow(S, T);
+		System.out.println("minWindow : " + minWindow);
 	}
 	
 }	
