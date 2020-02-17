@@ -29,6 +29,7 @@ public class IsSubTree {
     public boolean isSameTree(TreeNode s, TreeNode t) {
        if(s == null && t == null){
            return true;
+           
        }
        
        if(s == null || t == null){
