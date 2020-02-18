@@ -1,5 +1,7 @@
 package Strings;
 
+import java.util.PriorityQueue;
+
 public class IsSubTree {
    
 	public class TreeNode {
@@ -10,7 +12,9 @@ public class IsSubTree {
 	 }
 	
 	public boolean isSubtree(TreeNode s, TreeNode t) {
-        if(t == null){
+		
+		
+		if(t == null){
             return true;
         }
         
