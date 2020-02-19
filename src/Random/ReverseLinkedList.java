@@ -3,7 +3,8 @@ package Random;
 public class ReverseLinkedList {
 	 public static void main(String[] args) {
 		 
-         Node head = null;
+         
+		 Node head = null;
 
          ReverseLinkedList ll = new ReverseLinkedList();
          head = ll.insertAtHead(head, 5);
