@@ -14,7 +14,7 @@ public class ReverseIntegers {
 		boolean negative = false;
 		
 		if(x < 0) {
-			negative = true;
+			negative = true; 
 			x *= -1;
 		}
 		
