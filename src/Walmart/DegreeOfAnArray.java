@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class DegreeOfAnArray {
 	
-	public int findShortestSubArray(int[] nums) {
+	public static int findShortestSubArray(int[] nums) {
 	      
         int minDegree=0;
         int minLength=0;
@@ -31,4 +31,10 @@ public class DegreeOfAnArray {
         
         return minLength;
     }
+	
+	public static void main(String[] args) {
+		int[] arr = {1, 2, 2, 3, 1};
+		int ShortestDis = findShortestSubArray(arr);
+		System.out.println(ShortestDis);
+	}
 }
