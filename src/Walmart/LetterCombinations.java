@@ -31,12 +31,9 @@ public class LetterCombinations {
             return; 
         }
         
-        
-        
         String letters = MAPPING[digits.charAt(index) - '0'];
         
         for(char letter:letters.toCharArray()){
-        	
             helper(digits, index+1, combinations+letter, result);
         }
         
