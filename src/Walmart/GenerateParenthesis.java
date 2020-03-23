@@ -1,7 +1,10 @@
 package Walmart;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
 
 public class GenerateParenthesis {
 	
@@ -28,6 +31,8 @@ public class GenerateParenthesis {
 	    
 	
 	public static void main(String[] args) {
+		
+		Queue<Integer> que = new LinkedList<>(); 
 		
 		int n=3;
 		            		   
