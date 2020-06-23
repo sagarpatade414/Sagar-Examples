@@ -38,7 +38,7 @@ public class FractionToDecimal {
         while(remainder !=0 ){
            
             if(map.containsKey(remainder)){
-                sb.insert(map.get(remainder), "()");
+                sb.insert(map.get(remainder), "(");
                 sb.append(")");
                 break;
             }
